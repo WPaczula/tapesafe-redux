@@ -1,0 +1,49 @@
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__item {
+    min-width: 20em;
+    box-shadow: 0px 0px 44px -13px rgba(0, 0, 0, 0.73);
+    background: #075d59;
+    margin: 1em;
+    flex: 0 0 auto;
+    border-radius: 1em;
+    display: flex;
+    height: 5em;
+    color: white;
+    transition: transform 0.25s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__image {
+    flex: 0 1 3em;
+    height: 3em;
+    margin: 1em;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__user-data {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__user-name {
+    font-weight: 700;
+  }
+
+  &__user-phone,
+  &__user-email {
+    font-weight: normal;
+    font-size: 0.75em;
+  }
+}
