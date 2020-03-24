@@ -1,9 +1,13 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import App from "..";
+import App from "../App";
 
 describe("App", () => {
-  it("should render without an error", () => {
-    render(<App />);
+  it("should call load users if they are not loaded.", () => {
+    const loadUsers = jest.fn() as () => void;
+
+    render(<App loadUsers={loadUsers} users={undefined} loading={true} />);
+
+    expect(loadUsers).toHaveBeenCalledTimes(1);
   });
 });

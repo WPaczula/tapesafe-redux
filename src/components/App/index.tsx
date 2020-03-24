@@ -1,28 +1,21 @@
-import React from "react";
-import List from "components/List";
-import { IUser } from "interfaces/users";
-import Api from "api";
-import styles from "./styles.module.scss";
+import { bindActionCreators, Dispatch } from "redux";
+import { connect } from "react-redux";
+import { selectUsers, selectLoading } from "selectors/users";
+import { loadUsers } from "actions/users";
+import { Store } from "reducers";
+import App from "./App";
 
-const api = new Api();
+const mapStateToProps = (state: Store) => ({
+  users: selectUsers(state),
+  loading: selectLoading(state)
+});
 
-function App() {
-  const [users, setUsers] = React.useState<Array<IUser> | undefined>();
-
-  React.useEffect(() => {
-    async function getUsers() {
-      const users = await api.getUsers();
-      setUsers(users.data.results);
-    }
-
-    getUsers();
-  }, []);
-
-  return (
-    <div className={styles["app"]}>
-      {users === undefined ? <div>Loading...</div> : <List users={users} />}
-    </div>
+const mapDispatchToProps = (dispatch: Dispatch) =>
+  bindActionCreators(
+    {
+      loadUsers
+    },
+    dispatch
   );
-}
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
