@@ -1,12 +1,7 @@
-import {
-  loadUsers,
-  loadUsersRequested,
-  loadUsersSuccess,
-  loadUsersFailure
-} from "../users";
-import { IUsersState } from "reducers/users";
+import { loadUsers, loadUsersAction } from "..";
+import { UsersState } from "features/users/types";
 
-const state: IUsersState = {
+const state: UsersState = {
   users: undefined,
   loading: false,
   error: undefined
@@ -30,10 +25,10 @@ describe("loadUsers", () => {
     await loadUsers()(dispatch, () => state, api);
 
     // Assert
-    expect(dispatch).toHaveBeenCalledWith(loadUsersRequested());
+    expect(dispatch).toHaveBeenCalledWith(loadUsersAction.request());
     expect(api.getUsers).toHaveBeenCalled();
     expect(dispatch).toHaveBeenCalledWith(
-      loadUsersSuccess(response.data.results)
+      loadUsersAction.success(response.data.results)
     );
   });
 
@@ -53,6 +48,6 @@ describe("loadUsers", () => {
 
     // Assert
     expect(api.getUsers).toHaveBeenCalled();
-    expect(dispatch).toHaveBeenCalledWith(loadUsersFailure(error));
+    expect(dispatch).toHaveBeenCalledWith(loadUsersAction.failure(error));
   });
 });

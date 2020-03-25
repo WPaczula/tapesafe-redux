@@ -1,11 +1,11 @@
 import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
-import { selectUsers, selectLoading } from "selectors/users";
-import { loadUsers } from "actions/users";
-import { Store } from "reducers";
+import { selectUsers, selectLoading } from "features/users/selectors";
+import { loadUsers } from "features/users/actions";
+import { RootState } from "store";
 import App from "./App";
 
-const mapStateToProps = (state: Store) => ({
+const mapStateToProps = (state: RootState) => ({
   users: selectUsers(state),
   loading: selectLoading(state)
 });

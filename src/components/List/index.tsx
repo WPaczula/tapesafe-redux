@@ -1,9 +1,9 @@
 import * as React from "react";
-import { IUser } from "interfaces/users";
+import { User } from "models/user";
 import styles from "./styles.module.scss";
 
 interface IListProps {
-  users: Array<IUser>;
+  users: Array<User>;
 }
 
 const List: React.FunctionComponent<IListProps> = ({ users }) => {

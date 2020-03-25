@@ -1,24 +1,24 @@
-export interface IUserName {
+export interface UserName {
   title: string;
   first: string;
   last: string;
 }
 
-export interface IUserId {
+export interface UserId {
   name: string;
   value: string;
 }
 
-export interface IUserPicture {
+export interface UserPicture {
   large: string;
   medium: string;
   thumbnail: string;
 }
 
-export interface IUser {
-  id: IUserId;
-  name: IUserName;
+export interface User {
+  id: UserId;
+  name: UserName;
   email: string;
   phone: string;
-  picture: IUserPicture;
+  picture: UserPicture;
 }

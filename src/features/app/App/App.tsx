@@ -1,11 +1,12 @@
 import React from "react";
 import List from "components/List";
-import { IUser } from "interfaces/users";
+import Spinner from "components/Spinner";
+import { User } from "models/user";
 import styles from "./styles.module.scss";
 
 interface IAppProps {
   loadUsers(): void;
-  users: Array<IUser> | undefined;
+  users: Array<User> | undefined;
   loading: boolean;
 }
 
@@ -20,11 +21,7 @@ const App: React.FunctionComponent<IAppProps> = ({
 
   return (
     <div className={styles["app"]}>
-      {users === undefined || loading ? (
-        <div>Loading...</div>
-      ) : (
-        <List users={users} />
-      )}
+      {users === undefined || loading ? <Spinner /> : <List users={users} />}
     </div>
   );
 };
