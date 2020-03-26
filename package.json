@@ -1,6 +1,7 @@
 {
   "name": "thunks",
   "version": "0.1.0",
+  "homepage": "https://wpaczula.github.io/typesafe-redux",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -12,6 +13,7 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-redux": "^7.1.7",
     "axios": "^0.19.2",
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -28,7 +30,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test:ci": "env CI=true react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "node ./scripts/deploy.js"
   },
   "eslintConfig": {
     "extends": "react-app"
