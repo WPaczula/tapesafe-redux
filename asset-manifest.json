@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/typesafe-redux/static/css/main.0ff53563.chunk.css",
+    "main.css": "/typesafe-redux/static/css/main.40228a09.chunk.css",
     "main.js": "/typesafe-redux/static/js/main.75caceea.chunk.js",
     "main.js.map": "/typesafe-redux/static/js/main.75caceea.chunk.js.map",
     "runtime-main.js": "/typesafe-redux/static/js/runtime-main.7d6f569b.js",
@@ -8,15 +8,15 @@
     "static/js/2.d32d5bd4.chunk.js": "/typesafe-redux/static/js/2.d32d5bd4.chunk.js",
     "static/js/2.d32d5bd4.chunk.js.map": "/typesafe-redux/static/js/2.d32d5bd4.chunk.js.map",
     "index.html": "/typesafe-redux/index.html",
-    "precache-manifest.298b953717d23c74494a8e378d990b2e.js": "/typesafe-redux/precache-manifest.298b953717d23c74494a8e378d990b2e.js",
+    "precache-manifest.9b4e428b22ca843d0abbb37a096d746f.js": "/typesafe-redux/precache-manifest.9b4e428b22ca843d0abbb37a096d746f.js",
     "service-worker.js": "/typesafe-redux/service-worker.js",
-    "static/css/main.0ff53563.chunk.css.map": "/typesafe-redux/static/css/main.0ff53563.chunk.css.map",
+    "static/css/main.40228a09.chunk.css.map": "/typesafe-redux/static/css/main.40228a09.chunk.css.map",
     "static/js/2.d32d5bd4.chunk.js.LICENSE.txt": "/typesafe-redux/static/js/2.d32d5bd4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7d6f569b.js",
     "static/js/2.d32d5bd4.chunk.js",
-    "static/css/main.0ff53563.chunk.css",
+    "static/css/main.40228a09.chunk.css",
     "static/js/main.75caceea.chunk.js"
   ]
 }
